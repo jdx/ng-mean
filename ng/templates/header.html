@@ -1,0 +1,18 @@
+<nav ng-controller='NavCtrl' class='navbar navbar-default' role='navigation'>
+  <div class='container'>
+    <div class='navbar-header'>
+      <a class='navbar-brand' href='/'>APPNAME</a>
+    </div>
+    <ul class='nav navbar-nav'>
+      <li><a href='/posts'>Posts</a></li>
+      <li><a href='/users'>Users</a></li>
+    </ul>
+    <ul ng-if='!user' class='nav navbar-nav navbar-right'>
+      <li><a href='/register'>Register</a></li>
+      <li><a href='/login'>Sign in</a></li>
+    </ul>
+    <p ng-if='user' class='navbar-text navbar-right'>
+    Signed in as {{user.username}}
+    </p>
+  </div>
+</nav>

@@ -9,23 +9,9 @@
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="<%- assets('app.css') %>">
 </head>
-<body ng-app='APPNAME'>
+<body ng-cloak ng-app='APPNAME'>
 
-  <nav class='navbar navbar-default' role='navigation'>
-    <div class='container'>
-      <div class='navbar-header'>
-        <a class='navbar-brand' href='/'>APPNAME</a>
-      </div>
-      <ul class='nav navbar-nav'>
-        <li><a href='/posts'>Posts</a></li>
-        <li><a href='/users'>Users</a></li>
-      </ul>
-      <ul class='nav navbar-nav navbar-right'>
-        <li><a href='/register'>Register</a></li>
-        <li><a href='/login'>Sign in</a></li>
-      </p>
-    </div>
-  </nav>
+  <div ng-include="'header.html'"></div>
 
   <div class='container'>
     <ng-view></ng-view>
