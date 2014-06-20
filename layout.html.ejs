@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APPNAME</title>
+</head>
+<body ng-app='APPNAME'>
+
+  <h1>app</h1>
+
+  <ng-view></ng-view>
+
+  <footer></footer>
+
+  <% if (config.development) { %>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular.js'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular-route.min.js'></script>
+  <% } else { %>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular.min.js'></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0-beta.8/angular-route.min.js'></script>
+  <% } %>
+  <script src='<%- assets('app.js') %>'></script>
+  <script src='<%- assets('templates.js') %>'></script>
+</body>
+</html>
