@@ -1,4 +1,4 @@
-var db = require('../db')
+var db = require('../mongo')
 
 var Post = db.model('Post', {
   body: { type: String, required: true },

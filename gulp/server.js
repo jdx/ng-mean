@@ -5,7 +5,7 @@ var nodemonOpts = { script: 'node/server.js',
                     ext: 'js',
                     ignore: ['ng*', 'gulp*', 'assets*'] }
 
-gulp.task('server', function () {
+gulp.task('server:dev', function () {
   nodemon(nodemonOpts)
 })
 
