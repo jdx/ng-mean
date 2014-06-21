@@ -1,9 +1,9 @@
 var router = require('express').Router()
 var auth   = require('../../auth')
 
-router.use(auth())
+router.use(auth)
 
-router.get('/user', function (req, res) {
+router.get('/', function (req, res) {
   if (req.user) {
     res.json(req.user)
   } else {
