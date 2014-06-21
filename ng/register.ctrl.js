@@ -1,8 +1,10 @@
 angular.module('APPNAME')
-  .controller('RegisterCtrl', function ($scope, UsersSvc) {
+  .controller('RegisterCtrl', function ($scope, $location, UsersSvc, AuthSvc) {
     $scope.register = function (user) {
       UsersSvc.create(user).success(function () {
-        alert('created user')
+        AuthSvc.login(user.username, user.password).success(function () {
+          $location.path('/users/' + user.username)
+        })
       })
     }
   })

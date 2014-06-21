@@ -7,6 +7,8 @@ angular.module('APPNAME')
     }
     reload()
 
+    $scope.newPost = {}
+
     $scope.create = function (post) {
       PostsSvc.create(post).success(function () {
         $scope.newPost = {}

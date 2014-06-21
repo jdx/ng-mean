@@ -1,6 +1,8 @@
 angular.module('APPNAME')
 .controller('NavCtrl', function ($rootScope, $window, AuthSvc) {
+  $rootScope.logout = AuthSvc.logout
+
   AuthSvc.getCurrentUser().then(function (user) {
-    $rootScope.user = user
+    $rootScope.currentUser = user
   })
 })

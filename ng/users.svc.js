@@ -6,4 +6,7 @@ angular.module('APPNAME')
     this.fetch = function () {
       return $http.get('/api/users')
     }
+    this.findByUsername = function (username) {
+      return $http.get('/api/users/' + username)
+    }
   })

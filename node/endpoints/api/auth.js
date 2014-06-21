@@ -4,7 +4,7 @@ var jwt    = require('jwt-simple')
 var models = require('../../models')
 var config = require('../../config')
 
-router.post('/', function (req, res, next) {
+router.post('/', function (req, res) {
   models.User.findOne({username: req.body.username}, function (err, user) {
     if (err || !user)   { return res.send(401) }
     bcrypt.compare(req.body.password, user.passwordHash, function (err, valid) {
